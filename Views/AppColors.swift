@@ -9,9 +9,10 @@ import SwiftUI
 
 struct AppColors {
     static let mainBackgroundColor = LinearGradient(gradient: Gradient(colors: [
-        Color(red: 6/255,
-              green: 1/255,
-              blue: 35/255),
+        //Top to bottom
+        Color(red: 2/255,
+              green: 4/255,
+              blue: 11/255),
         Color(red: 107/255,
               green: 162/255,
               blue: 255/255),
