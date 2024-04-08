@@ -13,12 +13,15 @@ struct AppColors {
         Color(red: 2/255,
               green: 4/255,
               blue: 11/255),
+        Color(red: 17/255,
+              green: 47/255,
+              blue: 96/255),
         Color(red: 107/255,
               green: 162/255,
               blue: 255/255),
         Color(red: 255/255,
-              green: 249/255,
-              blue: 242/255)]),
+              green: 218/255,
+              blue: 174/255)]),
         startPoint: .top,
         endPoint: .bottom)
     
@@ -30,9 +33,8 @@ struct AppColors {
 struct AppColorsPreview: View {
     var body: some View {
         VStack {
-            Rectangle()
-                .fill(AppColors.mainBackgroundColor)
-                .frame(height: 200)
+            AppColors.mainBackgroundColor
+                .ignoresSafeArea()
             Text("Main Background Color")
                 .bold()
                 .padding()
