@@ -14,6 +14,8 @@ struct WelcomeView: View {
                 .ignoresSafeArea()
             VStack() {
                 Image("WelcomeViewImage")
+                    .resizable()
+                    .scaledToFill()
         
                 Text("HappyThoughts")
                     .font(.largeTitle)
