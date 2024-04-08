@@ -12,17 +12,14 @@ struct WelcomeView: View {
         ZStack {
             AppColors.mainBackgroundColor
                 .ignoresSafeArea()
-            
-            VStack(spacing: 20) {
-                Rectangle()
-                    .frame(width: 375,height: 350)
-                    .opacity(0.2)
+            VStack() {
+                Image("WelcomeViewImage")
+        
                 Text("HappyThoughts")
                     .font(.largeTitle)
                 Text("''Gratefulness Quote Holder''")
                     .padding()
-                Spacer() //Moves buttons to bottom of the screen
-                Buttons.GeneralButtons(text: "Login", 
+                Buttons.GeneralButtons(text: "Login",
                                        action: {
                     //TODO: Link to HomeView()
                 })
