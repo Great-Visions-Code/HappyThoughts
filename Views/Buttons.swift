@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Buttons {
+    
     struct GeneralButtons: View {
         let text: String
         let action: () -> Void
@@ -15,13 +16,16 @@ struct Buttons {
         var body: some View {
             Button(action: action) {
                 Text(text)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: 200)
-                    .padding()
                     .foregroundStyle(.black)
+                    .fontWeight(.bold)
+                    .padding()
+                    .frame(maxWidth: 250)
                     .background(AppColors.mainButtonColor)
+                    .cornerRadius(9)
                     .opacity(0.9)
-                    .cornerRadius(40)
+                    .shadow(radius: 10, 
+                            x: 0,
+                            y: 10)
             }
         }
     }
