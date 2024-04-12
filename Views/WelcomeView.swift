@@ -10,15 +10,14 @@ import SwiftUI
 struct WelcomeView: View {
     var body: some View {
         ZStack {
-            AppColors.mainBackgroundColor
-                .ignoresSafeArea()
+            AnimatedBackground()
             
             VStack(alignment: .center) {
                 Image("WelcomeViewImage")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .shadow(color: .blue.opacity(0.6),
-                            radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                            radius: 10)
                     .clipped(antialiased: true)
                     .padding(EdgeInsets(top: 0, 
                                         leading: 0,
