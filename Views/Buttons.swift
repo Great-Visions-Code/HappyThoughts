@@ -23,7 +23,7 @@ struct Buttons {
                     .background(AppColors.mainButtonColor)
                     .cornerRadius(9)
                     .opacity(0.9)
-                    .shadow(radius: 10, 
+                    .shadow(radius: 5, 
                             x: 0,
                             y: 10)
             }
