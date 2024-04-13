@@ -29,8 +29,6 @@ struct QuoteDataModel {
               author: "Buddha"),
         Quote(text: "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.", 
               author: "Buddha"),
-        Quote(text: "In today’s rush, we all think too much — seek too much — want too much — and forget about the joy of just being.", 
-              author: "Eckha//Tolle"),
         Quote(text: "Peace comes from within. Do not seek it without.", 
               author: "Buddha"),
         Quote(text: "Mindfulness is a way of befriending ourselves and our experience.", 
