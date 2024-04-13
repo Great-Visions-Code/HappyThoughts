@@ -19,33 +19,22 @@ struct WelcomeView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .shadow(color: .blue.opacity(0.6),
-                            radius: 10)
+                            radius: 5)
                     .clipped(antialiased: true)
                     .padding(EdgeInsets(top: 0, 
                                         leading: 0,
                                         bottom: 15,
                                         trailing: 0))
                 Text("HappyThoughts")
-                    .font(.system(.title,
+                    .font(.system(.largeTitle,
                                   design: .serif))
                     .bold()
                     .padding()
+                    .shadow(radius: 4,
+                            x: 0,
+                            y: 10)
                 
-                if viewModel.displayAuthor.isEmpty {
-                    Text(viewModel.displayText)
-                        .font(.system(.title3,
-                                      design: .serif))
-                        .padding()
-                        .multilineTextAlignment(.center)
-                } else {
-                    Text(viewModel.displayText)
-                        .font(.system(.title3,
-                                      design: .serif))                        .padding()
-                        .multilineTextAlignment(.center)
-                    Text(viewModel.displayAuthor)
-                        .font(.system(.subheadline,
-                                      design: .serif))                        .padding()
-                }
+                RandomQuoteDisplay(text: viewModel.displayText, author: viewModel.displayAuthor)
                 
                 Buttons.GeneralButtons(text: "Login",
                                        action: {
