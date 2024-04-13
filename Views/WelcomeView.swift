@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @StateObject private var viewModel = QuoteDataViewModel()
+
     var body: some View {
         ZStack {
             AnimatedBackground()
@@ -28,10 +30,23 @@ struct WelcomeView: View {
                                   design: .serif))
                     .bold()
                     .padding()
-                Text("''Gratefulness Quote Holder''")
-                    .font(.system(.headline, 
-                                  design: .serif))
-                    .padding()
+                
+                if viewModel.displayAuthor.isEmpty {
+                    Text(viewModel.displayText)
+                        .font(.system(.title3,
+                                      design: .serif))
+                        .padding()
+                        .multilineTextAlignment(.center)
+                } else {
+                    Text(viewModel.displayText)
+                        .font(.system(.title3,
+                                      design: .serif))                        .padding()
+                        .multilineTextAlignment(.center)
+                    Text(viewModel.displayAuthor)
+                        .font(.system(.subheadline,
+                                      design: .serif))                        .padding()
+                }
+                
                 Buttons.GeneralButtons(text: "Login",
                                        action: {
                     // TODO: Link to HomeView()
@@ -40,6 +55,9 @@ struct WelcomeView: View {
                                        action: {
                     // TODO: Link to SignUpView()
                 })
+            }
+            .onAppear {
+                viewModel.chooseRandomDisplay()
             }
         }
     }
